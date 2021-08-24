@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.solvathon.R
 import com.solvathon.databinding.FragmentHomeBinding
 
@@ -30,11 +31,16 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        binding.claimBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_nav_home_to_claimsFragment)
+        }
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+
+
+//        binding.policyBtn.setOnClickListener {
+//            findNavController().navigate()
+//        }
+
         return root
     }
 
