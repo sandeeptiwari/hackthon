@@ -10,4 +10,8 @@
     <color name="primary_color">#0524A1</color>
     <color name="secondary_color">#00BB2D</color>
     <color name="text_color">#122543</color>
+    <color name="insurify_primary">#6200EE</color>
+    <color name="insurify_primary_variant">#3700B3</color>
+    <color name="insurify_secondary">#00BB2D</color>
+    <color name="insurify_secondary_variant">#018786</color>
 </resources>
