@@ -18,5 +18,6 @@ class LoginActivity : BaseActivity() {
     }
 
     override fun bindViewWithViewBinding(view: View) {
+
     }
 }
