@@ -30,10 +30,10 @@ class PolicyActivity :BaseActivity(){
     private fun getPolicy(): List<PolicyItem>{
         val policy = ArrayList<PolicyItem>()
 
-        val policy1 = PolicyItem("Rishabh Gupta", "dbiuh9283", " 21 Jan", "39480","Health")
-        val policy2 = PolicyItem("Rishabh Gupta", "pjef99203", " 21 Dec", "39480","Health")
-        val policy3 = PolicyItem("Rishabh Gupta", "nwekh2312", " 21 March", "39480","Health")
-        val policy4 = PolicyItem("Rishabh Gupta", "wdfwei334", " 21 Feb", "39480","Health")
+        val policy1 = PolicyItem("abcd", "dbiuh9283", " 21 Jan", "39480","Health")
+        val policy2 = PolicyItem("abcd", "pjef99203", " 21 Dec", "39480","Health")
+        val policy3 = PolicyItem("abcd", "nwekh2312", " 21 March", "39480","Health")
+        val policy4 = PolicyItem("abcd", "wdfwei334", " 21 Feb", "39480","Health")
 
         policy.add(policy1)
         policy.add(policy2)
