@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal">
 
     <LinearLayout
@@ -152,11 +153,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="350sp"
         android:layout_marginLeft="20sp">
-        <include
-            android:id="@+id/eee"
-            layout="@layout/policy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_my_policy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            android:clipToPadding="false"
+            tools:listitem="@layout/policy"/>
     </LinearLayout>
 
 
