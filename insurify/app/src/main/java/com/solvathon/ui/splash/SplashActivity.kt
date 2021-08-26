@@ -18,6 +18,7 @@ import com.solvathon.ui.base.BaseActivity
 import com.solvathon.ui.claims.ClaimActivity
 import com.solvathon.ui.home.HomeActivity
 import com.solvathon.ui.login.LoginActivity
+import com.solvathon.ui.quotes.QuoteActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -33,7 +34,7 @@ class SplashActivity : BaseActivity() {
                 .start()
         } else {
             Log.i("LOGIN", "User is not logined open login screen")
-            loadActivity(ClaimActivity::class.java)
+            loadActivity(LoginActivity::class.java)
                 .byFinishingAll()
                 .start()
         }
