@@ -17,7 +17,7 @@ abstract class BaseActivity : AppCompatActivity(), Navigator {
     lateinit var activityStarter: ActivityStarter
 
     @Inject
-    lateinit var appPreference: AppPreferences;
+    lateinit var appPreference: AppPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,4 +33,6 @@ abstract class BaseActivity : AppCompatActivity(), Navigator {
     abstract fun findContentView(): Int
 
     abstract fun bindViewWithViewBinding(view: View)
+
+    abstract fun toggleLoader(b: Boolean)
 }

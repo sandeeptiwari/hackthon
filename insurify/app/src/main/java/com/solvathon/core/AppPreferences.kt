@@ -21,4 +21,15 @@ constructor(private val preferences: SharedPreferences) {
     fun getBoolean(name: String): Boolean {
         return preferences.getBoolean(name, false)
     }
+
+    fun getString(userJson: String): String {
+        TODO("Not yet implemented")
+    }
+
+    fun putString(userJson: String, userJson1: String) {
+        TODO("Not yet implemented")
+    }
+
+    fun clearAll() {
+    }
 }

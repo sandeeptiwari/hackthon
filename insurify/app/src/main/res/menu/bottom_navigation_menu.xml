@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:enabled="true"
+        android:icon="@drawable/home_24"
+        android:title="@string/menu_home"/>
+    <item
+        android:id="@+id/nav_locator"
+        android:enabled="true"
+        android:icon="@drawable/locator_24"
+        android:title="@string/menu_locator"/>
+    <item
+        android:id="@+id/nav_support"
+        android:enabled="true"
+        android:icon="@drawable/siren"
+        android:title="@string/menu_support"/>
+
+    <item
+        android:id="@+id/nav_elocker"
+        android:enabled="true"
+        android:icon="@drawable/dock_24"
+        android:title="@string/menu_elocker"/>
+
+    <item
+        android:id="@+id/nav_more"
+        android:enabled="true"
+        android:icon="@drawable/more_24"
+        android:title="@string/menu_more"/>
+</menu>

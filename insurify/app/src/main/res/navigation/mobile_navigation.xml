@@ -9,17 +9,29 @@
         android:id="@+id/nav_home"
         android:name="com.solvathon.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/home_fragment" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.solvathon.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_locator"
+        android:name="com.solvathon.ui.locator.LocatorFragment"
+        android:label="@string/menu_locator"
+        tools:layout="@layout/fragment_locator" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.solvathon.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_support"
+        android:name="com.solvathon.ui.support.SupportFragment"
+        android:label="@string/menu_support"
+        tools:layout="@layout/support_fragment" />
+
+    <fragment
+        android:id="@+id/nav_elocker"
+        android:name="com.solvathon.ui.locker.ELockerFragment"
+        android:label="@string/menu_elocker"
+        tools:layout="@layout/fragment_elocker" />
+
+    <fragment
+        android:id="@+id/nav_more"
+        android:name="com.solvathon.ui.more.MoreFragment"
+        android:label="@string/menu_more"
+        tools:layout="@layout/more_fragment" />
 </navigation>

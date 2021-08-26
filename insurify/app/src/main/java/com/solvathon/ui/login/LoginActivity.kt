@@ -19,4 +19,8 @@ class LoginActivity : BaseActivity() {
 
     override fun bindViewWithViewBinding(view: View) {
     }
+
+    override fun toggleLoader(b: Boolean) {
+        TODO("Not yet implemented")
+    }
 }

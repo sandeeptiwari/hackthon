@@ -6,16 +6,15 @@ import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import android.view.View
-import android.view.Window
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import com.solvathon.MainActivity
 import com.solvathon.R
 import com.solvathon.core.Common
 import com.solvathon.databinding.ActivitySplashBinding
 import com.solvathon.ui.base.BaseActivity
-import com.solvathon.ui.home.HomeActivity
 import com.solvathon.ui.login.LoginActivity
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -27,12 +26,12 @@ class SplashActivity : BaseActivity() {
     private val runnable = Runnable {
 
         if (appPreference.getBoolean(Common.IS_LOGIN)) {
-            loadActivity(HomeActivity::class.java)
+            loadActivity(MainActivity::class.java)
                 .byFinishingAll()
                 .start()
         } else {
             Log.i("LOGIN", "User is not logined open login screen")
-            loadActivity(LoginActivity::class.java)
+            loadActivity(MainActivity::class.java)
                 .byFinishingAll()
                 .start()
         }
@@ -64,6 +63,10 @@ class SplashActivity : BaseActivity() {
 
     override fun bindViewWithViewBinding(view: View) {
         binding = ActivitySplashBinding.bind(view)
+    }
+
+    override fun toggleLoader(b: Boolean) {
+        TODO("Not yet implemented")
     }
 
     override fun findContentView(): Int {
