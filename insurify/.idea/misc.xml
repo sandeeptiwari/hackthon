@@ -3,9 +3,34 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/activity_login.xml" value="0.10758196721311475" />
-        <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/activity_splash.xml" value="0.10758196721311475" />
         <entry key="..\:/research_and_deve/android/solvathon/client/insurify/app/src/main/res/layout/content_main.xml" value="0.10144927536231885" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.25925925925925924" />
+        <entry key="app/src/main/res/drawable/ic_hsbc_logo.xml" value="0.31145833333333334" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.25925925925925924" />
+        <entry key="app/src/main/res/drawable/ic_menu_camera.xml" value="0.31145833333333334" />
+        <entry key="app/src/main/res/drawable/ic_menu_gallery.xml" value="0.25925925925925924" />
+        <entry key="app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.25925925925925924" />
+        <entry key="app/src/main/res/drawable/mybutton.xml" value="0.31145833333333334" />
+        <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.25925925925925924" />
+        <entry key="app/src/main/res/layout/activity_base.xml" value="0.2259963768115942" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.2259963768115942" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.2259963768115942" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3512741136973228" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.2259963768115942" />
+        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.1019000160723617" />
+        <entry key="app/src/main/res/layout/claim_list_item.xml" value="0.36028537455410226" />
+        <entry key="app/src/main/res/layout/claim_screen.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.14361702127659576" />
+        <entry key="app/src/main/res/layout/fragment_claims.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.14361702127659576" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3578842834127159" />
+        <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.14361702127659576" />
+        <entry key="app/src/main/res/layout/my_claims.xml" value="0.2259963768115942" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.14361702127659576" />
+        <entry key="app/src/main/res/layout/policy_list_item.xml" value="0.28804193170051967" />
+        <entry key="app/src/main/res/layout/quote_list_item.xml" value="0.3406234071373036" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.2907692307692308" />
+        <entry key="app/src/main/res/menu/main.xml" value="0.2907692307692308" />
       </map>
     </option>
   </component>
