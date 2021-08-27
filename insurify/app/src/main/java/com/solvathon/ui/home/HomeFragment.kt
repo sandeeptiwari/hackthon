@@ -1,5 +1,6 @@
 package com.solvathon.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -12,6 +13,7 @@ import com.solvathon.domain.pojo.DashBoardMenu
 import com.solvathon.domain.pojo.Policy
 import com.solvathon.domain.pojo.Product
 import com.solvathon.ui.base.BaseFragment
+import com.solvathon.ui.claims.MyClaimsActivity
 import com.solvathon.ui.home.adapter.HomeMenuAdapter
 import com.solvathon.ui.home.adapter.PolicyLobsAdapter
 import com.solvathon.ui.home.adapter.ProductOfferAdapter
@@ -178,7 +180,9 @@ class HomeFragment : BaseFragment(), PolicyLobsAdapter.OnItemClickListener,
             0 -> {
                 //wellness
             }
-            5 -> {
+            1 -> {
+               val intent : Intent = Intent(activity, MyClaimsActivity::class.java)
+                startActivity(intent)
             }
         }
     }
