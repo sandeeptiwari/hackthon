@@ -49,6 +49,7 @@ dependencies {
     implementation "com.google.dagger:hilt-android:2.38.1"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt "com.google.dagger:hilt-compiler:2.38.1"
+<<<<<<< HEAD
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
     implementation "io.reactivex.rxjava2:rxjava:2.2.6"
     implementation "com.squareup.retrofit2:adapter-rxjava2:2.4.0"
@@ -68,6 +69,10 @@ dependencies {
 
     implementation "com.squareup.okhttp3:logging-interceptor:4.3.1"
     implementation 'com.google.code.gson:gson:2.8.8'
+=======
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+    implementation "androidx.cardview:cardview:1.0.0"
+>>>>>>> added claim activity and my claims layout file and recycler view dependencies
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
