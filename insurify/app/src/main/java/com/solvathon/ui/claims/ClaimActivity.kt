@@ -27,6 +27,10 @@ class ClaimActivity: BaseActivity() {
 
     }
 
+    override fun toggleLoader(b: Boolean) {
+
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

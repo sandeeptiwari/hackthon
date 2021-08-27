@@ -25,4 +25,6 @@
     <dimen name="_12sdp">12dp</dimen>
     <dimen name="_26sdp">26dp</dimen>
     <dimen name="_18sdp">18dp</dimen>
+    <dimen name="insurify_view_margin_large">16dp</dimen>
+    <dimen name="text_view_margin">8dp</dimen>
 </resources>

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
-    android:background="@color/insurify_secondary"
+    android:background="@color/colorPrimary"
     android:elevation="10dp"
     android:padding="5dp"
     app:cardCornerRadius="10dp">
@@ -158,7 +158,7 @@
             android:layout_marginStart="100dp"
             android:layout_marginTop="12dp"
             android:text="PaperLess Approval"
-            android:textColor="@color/insurify_secondary"
+            android:textColor="@color/colorAlphaPrimary"
             android:textSize="10sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button2" />
@@ -193,7 +193,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Premium Without Taxes"
-            android:textColor="@color/insurify_secondary"
+            android:textColor="@color/colorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.6"
             app:layout_constraintStart_toEndOf="@+id/text_view_monthly_payment"

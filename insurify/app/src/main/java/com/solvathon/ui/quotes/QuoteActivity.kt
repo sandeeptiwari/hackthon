@@ -30,6 +30,10 @@ class QuoteActivity : BaseActivity(){
 
     }
 
+    override fun toggleLoader(b: Boolean) {
+
+    }
+
     private fun getQuotes(): List<QuoteItem>{
         val quotes = ArrayList<QuoteItem>()
 

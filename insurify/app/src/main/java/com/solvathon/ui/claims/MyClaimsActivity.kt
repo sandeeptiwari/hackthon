@@ -31,6 +31,10 @@ class MyClaimsActivity :BaseActivity(){
 
     }
 
+    override fun toggleLoader(b: Boolean) {
+
+    }
+
     private fun getClaims(): List<ClaimItem>{
         val claims = ArrayList<ClaimItem>()
 
