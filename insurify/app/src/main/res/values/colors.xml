@@ -1,12 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="tab_enable">#FFFFFFFF</color>
+    <color name="tab_disable">#CAC7C7</color>
+    <color name="colorPrimary">#278be3</color>
+    <color name="colorPrimaryDark">#0f5998</color>
+    <color name="colorAccent">#4075a2</color>
+    <color name="colorNavIcon">#dae9f6</color>
+    <color name="colorNavText">#01294b</color>
+    <color name="app_bg">#f6f6f6</color>
+    <color name="app_gray">#cecece</color>
+    <color name="colorGray">#e1e1e1</color>
+    <color name="colorAlphaPrimary">#b3d82a1b</color>
+    <color name="colorBackgroundGray">#f9f9f9</color>
+    <color name="colorBookAppGreen">#84a549</color>
+    <color name="light_black">#ff555555</color>
+    <color name="light_blue">#5ef9fc</color>
+    <color name="light_gray">#a9a9a9</color>
+    <color name="offwhite">#fff2db</color>
+    <color name="orange">#ea924a</color>
+    <color name="yellow">#fac850</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
     <color name="insurify_primary">#6200EE</color>
     <color name="insurify_primary_variant">#3700B3</color>
     <color name="insurify_secondary">#00BB2D</color>

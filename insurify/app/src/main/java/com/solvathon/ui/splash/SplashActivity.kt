@@ -10,6 +10,7 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import com.solvathon.MainActivity
 import com.solvathon.R
 import com.solvathon.core.Common
 import com.solvathon.databinding.ActivitySplashBinding
@@ -28,12 +29,12 @@ class SplashActivity : BaseActivity() {
     private val runnable = Runnable {
 
         if (appPreference.getBoolean(Common.IS_LOGIN)) {
-            loadActivity(HomeActivity::class.java)
+            loadActivity(MainActivity::class.java)
                 .byFinishingAll()
                 .start()
         } else {
             Log.i("LOGIN", "User is not logined open login screen")
-            loadActivity(MyClaimsActivity::class.java)
+            loadActivity(MainActivity::class.java)
                 .byFinishingAll()
                 .start()
         }
