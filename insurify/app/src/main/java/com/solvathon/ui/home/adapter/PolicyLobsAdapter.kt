@@ -9,10 +9,10 @@ import com.solvathon.domain.pojo.Policy
 import androidx.appcompat.widget.AppCompatTextView
 import com.solvathon.R
 
-class PolicyAdapter (var policies: List<Policy>,
-                     val groupByInsuranceType: Map<kotlin.String, List<Policy>>,
-                     private val onItemClickListener: OnItemClickListener):
-    RecyclerView.Adapter<PolicyAdapter.PolicyViewHolder>() {
+class PolicyLobsAdapter (var policies: List<Policy>,
+                         val groupByInsuranceType: Map<kotlin.String, List<Policy>>,
+                         private val onItemClickListener: OnItemClickListener):
+    RecyclerView.Adapter<PolicyLobsAdapter.PolicyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PolicyViewHolder {
         val itemBinding =

@@ -38,6 +38,7 @@ class ProductOfferAdapter (var offerProducts: List<Product>,
     ) : RecyclerView.ViewHolder(itemBinding.root) {
 
         fun bind(product: Product) {
+            itemBinding.productImg.setBackgroundResource(product.productIcon)
             itemBinding.root.setOnClickListener {
                 onItemClickListener.onOfferItemClick(bindingAdapterPosition)
             }

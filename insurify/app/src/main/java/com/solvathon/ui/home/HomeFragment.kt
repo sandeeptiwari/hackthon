@@ -2,10 +2,7 @@ package com.solvathon.ui.home
 
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.appcompat.view.menu.MenuAdapter
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -16,7 +13,7 @@ import com.solvathon.domain.pojo.Policy
 import com.solvathon.domain.pojo.Product
 import com.solvathon.ui.base.BaseFragment
 import com.solvathon.ui.home.adapter.HomeMenuAdapter
-import com.solvathon.ui.home.adapter.PolicyAdapter
+import com.solvathon.ui.home.adapter.PolicyLobsAdapter
 import com.solvathon.ui.home.adapter.ProductOfferAdapter
 import com.visbiliti.exception.NoDataException
 import dagger.hilt.android.AndroidEntryPoint
@@ -24,7 +21,7 @@ import java.math.BigDecimal
 import java.time.LocalDate
 
 @AndroidEntryPoint
-class HomeFragment : BaseFragment(), PolicyAdapter.OnItemClickListener,
+class HomeFragment : BaseFragment(), PolicyLobsAdapter.OnItemClickListener,
     ProductOfferAdapter.OnOfferItemClickListener,
     HomeMenuAdapter.OnMenulickListener {
     lateinit var linearLayoutManager: LinearLayoutManager
@@ -32,9 +29,10 @@ class HomeFragment : BaseFragment(), PolicyAdapter.OnItemClickListener,
     companion object {
         fun newInstance() = HomeFragment()
     }
-    var products = listOf( Product(1, "Best health Insurance"),
-        Product(2, "Car Insurance"),
-        Product(3, "Travel Insurance")
+    var products = listOf( Product(1, "Best health Insurance", R.drawable.offer1),
+        Product(2, "Car Insurance", R.drawable.offer2),
+        Product(3, "Travel Insurance", R.drawable.offer3),
+        Product(3, "2 Wheeler Insurance", R.drawable.offer4)
     )
 
     var policies = listOf(
@@ -63,9 +61,9 @@ class HomeFragment : BaseFragment(), PolicyAdapter.OnItemClickListener,
         DashBoardMenu("Wellness", R.drawable.wellness),
         DashBoardMenu("Claim", R.drawable.claim),
         DashBoardMenu("Buy Now", R.drawable.buynow),
-        DashBoardMenu("Wellness", R.drawable.renew),
-        DashBoardMenu("Wellness", R.drawable.risk),
-        DashBoardMenu("Wellness", R.drawable.offer)
+        DashBoardMenu("Renew", R.drawable.renew),
+        DashBoardMenu("Risk", R.drawable.risk),
+        DashBoardMenu("Quote", R.drawable.offer)
     )
 
     private var _binding: HomeFragmentBinding? = null
@@ -73,12 +71,10 @@ class HomeFragment : BaseFragment(), PolicyAdapter.OnItemClickListener,
     private val binding: HomeFragmentBinding
         get() = _binding!!
 
-
-
     val policyListAdapter by lazy {
         val distinctBy = policies.distinctBy { it.insuranceType }
         val groupByInsuranceType = policies.groupBy { it.insuranceType }
-        PolicyAdapter(distinctBy, groupByInsuranceType, this)
+        PolicyLobsAdapter(distinctBy, groupByInsuranceType, this)
     }
 
     val productOfferListAdapter by lazy {
@@ -116,7 +112,6 @@ class HomeFragment : BaseFragment(), PolicyAdapter.OnItemClickListener,
                 Log.d("tag", " responseBody")
                 showLoader(false)
             },
-
             { throwable ->
                 Log.d("tag", " throwable")
                 showLoader(false)
@@ -134,7 +129,11 @@ class HomeFragment : BaseFragment(), PolicyAdapter.OnItemClickListener,
     }
 
     override fun onItemClick(pos: Int) {
-        TODO("Not yet implemented")
+        when(pos) {
+            0 -> {
+                //policy screen : health
+            }
+        }
     }
 
     private fun setUpRecyclerView() {
@@ -175,6 +174,12 @@ class HomeFragment : BaseFragment(), PolicyAdapter.OnItemClickListener,
     }
 
     override fun onMenuClick(pos: Int) {
-        TODO("Not yet implemented")
+        when(pos) {
+            0 -> {
+                //wellness
+            }
+            5 -> {
+            }
+        }
     }
 }
