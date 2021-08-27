@@ -14,9 +14,13 @@
             android:name=".ui.login.LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.claims.ClaimActivity"
+            android:name=".ui.claims.MyClaimsActivity"
             android:exported="true"
             android:label="Claims"/>
+        <activity
+            android:name=".ui.claims.ClaimActivity"
+            android:exported="true"
+            android:label="Claim"/>
         <activity
             android:name=".ui.quotes.QuoteActivity"
             android:exported="true"
