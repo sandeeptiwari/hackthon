@@ -65,7 +65,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/button_view_claim"
             style="@style/insurify_claim_item_button"
             android:background="@drawable/mybutton"
             android:text="View"
