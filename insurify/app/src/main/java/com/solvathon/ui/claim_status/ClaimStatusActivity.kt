@@ -15,7 +15,7 @@ class ClaimStatusActivity :BaseActivity(){
         val claimStatus = getClaimStatus()
 
         val claimsRecyclerView:RecyclerView = findViewById<RecyclerView>(R.id.recycler_claim_status)
-        claimsRecyclerView.adapter = MyPolicyAdapter(claimStatus)
+        claimsRecyclerView.adapter = MyClaimStatusAdapter(claimStatus)
         claimsRecyclerView.layoutManager = LinearLayoutManager(this)
 
     }
