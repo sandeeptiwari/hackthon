@@ -1,6 +1,10 @@
 package com.solvathon.ui.base
 
+import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.solvathon.core.AppPreferences
@@ -16,6 +20,26 @@ abstract class BaseFragment : Fragment() {
 
     @Inject
     lateinit var appPreferences: AppPreferences
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        val view = inflater.inflate(createLayout(), container, false)
+        bindViewWithViewBinding(view)
+        return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        bindData()
+    }
+
+    protected abstract fun bindData()
+
+    protected abstract fun createLayout(): Int
+
+    /**
+     * This method is used for binding view with your binding
+     */
+    protected abstract fun bindViewWithViewBinding(view: View)
 
     fun onError(throwable: Throwable) {
         throwable.message?.let { Log.i(TAG, it) }
