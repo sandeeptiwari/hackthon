@@ -21,7 +21,7 @@ class ClaimStatusActivity :BaseActivity(){
     }
 
     override fun findContentView(): Int {
-        return R.layout.policy
+        return R.layout.activity_policy
     }
 
     override fun bindViewWithViewBinding(view: View) {

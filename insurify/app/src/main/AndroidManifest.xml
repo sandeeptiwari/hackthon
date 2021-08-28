@@ -17,6 +17,9 @@
             android:name=".MainActivity"
             android:exported="true" />
         <activity
+            android:name=".ui.policy.PolicyActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.base.BaseActivity"
             android:exported="true" />
         <activity

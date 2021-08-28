@@ -1,6 +1,5 @@
 package com.solvathon.ui.policy
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.solvathon.R
 import com.solvathon.domain.pojo.Policy
 
-class MyPolicyAdapter(private val myPolicyList: List<Policy>): RecyclerView.Adapter<MyPolicyAdapter.MyPolicyViewHolder> (){
+class MyPolicyAdapter(private val myPolicyList: ArrayList<Policy>): RecyclerView.Adapter<MyPolicyAdapter.MyPolicyViewHolder> (){
 
     class MyPolicyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         //initial layout was diffreent so have kept the same id for testing will change once this works
@@ -22,7 +21,7 @@ class MyPolicyAdapter(private val myPolicyList: List<Policy>): RecyclerView.Adap
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyPolicyViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.policy,parent,false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.policy_item,parent,false)
         return MyPolicyViewHolder(itemView)
     }
 

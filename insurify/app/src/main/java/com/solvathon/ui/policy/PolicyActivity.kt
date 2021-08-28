@@ -4,48 +4,53 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.solvathon.R
+import com.solvathon.databinding.ActivityPolicyBinding
 import com.solvathon.domain.pojo.Policy
 import com.solvathon.ui.base.BaseActivity
+import dagger.hilt.android.AndroidEntryPoint
 import java.util.ArrayList
 
-class PolicyActivity(var policies: List<Policy>) :BaseActivity(){
+@AndroidEntryPoint
+class PolicyActivity() :BaseActivity(){
+    lateinit var linearLayoutManager: LinearLayoutManager
+    lateinit var binding: ActivityPolicyBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //actionbar
+        val actionbar = supportActionBar
+        //set actionbar title
+        actionbar!!.title = "Policy"
+        //set back button
+        actionbar.setDisplayHomeAsUpEnabled(true)
+        actionbar.setDisplayHomeAsUpEnabled(true)
 
-        val policy = getPolicy()
+        val policies = intent.getParcelableArrayListExtra<Policy>("POLICY_DATA")
+        setUpRecycleView(policies)
+    }
 
-        val claimsRecyclerView:RecyclerView = findViewById<RecyclerView>(R.id.recycler_view_my_policy)
-        claimsRecyclerView.adapter = MyPolicyAdapter(policies)
-        claimsRecyclerView.layoutManager = LinearLayoutManager(this)
-
+    fun setUpRecycleView(policies: ArrayList<Policy>?) {
+        linearLayoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
+        binding.recyclerViewMyPolicy.apply {
+            layoutManager = linearLayoutManager
+            adapter = policies?.let { MyPolicyAdapter(it) }
+        }
     }
 
     override fun findContentView(): Int {
-        return R.layout.policy
+        return R.layout.activity_policy
     }
 
     override fun bindViewWithViewBinding(view: View) {
-
+        binding = ActivityPolicyBinding.bind(view)
     }
 
     override fun toggleLoader(b: Boolean) {
         TODO("Not yet implemented")
     }
 
-    private fun getPolicy(): List<PolicyItem>{
-        val policy = ArrayList<PolicyItem>()
-
-        val policy1 = PolicyItem("abcd", "dbiuh9283", " 21 Jan", "39480","Health")
-        val policy2 = PolicyItem("abcd", "pjef99203", " 21 Dec", "39480","Health")
-        val policy3 = PolicyItem("abcd", "nwekh2312", " 21 March", "39480","Health")
-        val policy4 = PolicyItem("abcd", "wdfwei334", " 21 Feb", "39480","Health")
-
-        policy.add(policy1)
-        policy.add(policy2)
-        policy.add(policy3)
-        policy.add(policy4)
-
-        return policy
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
 }

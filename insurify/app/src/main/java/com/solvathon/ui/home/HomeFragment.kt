@@ -181,7 +181,10 @@ class HomeFragment : BaseFragment(), PolicyLobsAdapter.OnItemClickListener,
                 //wellness
             }
             5 -> {
-                val intent : Intent = Intent(activity, PolicyActivity(policies)::class.java)
+                val intent = Intent(activity, PolicyActivity()::class.java)
+                val bundle = Bundle()
+                bundle.putParcelableArrayList("POLICY_DATA", ArrayList(policies))
+                intent.putExtras(bundle)
                 startActivity(intent)
             }
         }

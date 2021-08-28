@@ -17,7 +17,7 @@ class MyQuoteAdapter(private val myQuoteList: List<QuoteItem>): RecyclerView.Ada
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyQuoteViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.policy,parent,false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.activity_policy,parent,false)
         return MyQuoteViewHolder(itemView)
     }
 
