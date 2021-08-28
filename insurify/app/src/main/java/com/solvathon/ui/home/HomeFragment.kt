@@ -18,6 +18,7 @@ import com.solvathon.ui.home.adapter.HomeMenuAdapter
 import com.solvathon.ui.home.adapter.PolicyLobsAdapter
 import com.solvathon.ui.home.adapter.ProductOfferAdapter
 import com.solvathon.ui.policy.PolicyActivity
+import com.solvathon.ui.quotes.QuoteActivity
 import com.visbiliti.exception.NoDataException
 import dagger.hilt.android.AndroidEntryPoint
 import java.math.BigDecimal
@@ -134,7 +135,14 @@ class HomeFragment : BaseFragment(), PolicyLobsAdapter.OnItemClickListener,
     override fun onItemClick(pos: Int) {
         when(pos) {
             0 -> {
-                //policy screen : health
+                var policyBasedOnLob=fetchPolicyBasedOnLob(pos)
+                var intent = Intent(activity, PolicyActivity()::class.java)
+                var bundle = Bundle()
+                if (policyBasedOnLob != null) {
+                    bundle.putParcelableArrayList("POLICY_DATA", ArrayList(policyBasedOnLob.filterNotNull()))
+                }
+                intent.putExtras(bundle)
+                startActivity(intent)
             }
         }
     }
@@ -183,6 +191,13 @@ class HomeFragment : BaseFragment(), PolicyLobsAdapter.OnItemClickListener,
             }
             1 -> {
                 val intent = Intent(activity, MyClaimsActivity::class.java)
+                startActivity(intent)
+            }
+            2->{
+                val intent = Intent(activity, QuoteActivity()::class.java)
+                val bundle = Bundle()
+                bundle.putParcelableArrayList("QUOTES_DATA", ArrayList(policies))
+                intent.putExtras(bundle)
                 startActivity(intent)
             }
             5 -> {

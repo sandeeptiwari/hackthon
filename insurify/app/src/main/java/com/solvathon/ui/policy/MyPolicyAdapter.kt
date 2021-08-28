@@ -13,10 +13,10 @@ class MyPolicyAdapter(private val myPolicyList: ArrayList<Policy>): RecyclerView
 
     class MyPolicyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         //initial layout was diffreent so have kept the same id for testing will change once this works
-        val policyId:TextView = itemView.findViewById(R.id.lifecover)
-        val premium:TextView = itemView.findViewById(R.id.claimsettled)
-        val fees:TextView = itemView.findViewById(R.id.monthlypay)
-        val taxes:TextView = itemView.findViewById(R.id.age)
+        val policyId:TextView = itemView.findViewById(R.id.textView13)
+        val premium:TextView = itemView.findViewById(R.id.textView14)
+        val fees:TextView = itemView.findViewById(R.id.textView15)
+        val taxes:TextView = itemView.findViewById(R.id.textView16)
         val viewPolicyBtn: Button = itemView.findViewById(R.id.viewPolicy)
     }
 

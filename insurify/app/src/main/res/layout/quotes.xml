@@ -56,7 +56,7 @@
             style="@style/CardView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Life Cover"
+            android:text="Quote ID"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
@@ -75,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Claim Settled"
+            android:text="Quote Fees"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/age" />
 
@@ -85,12 +85,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:text="Pay Monthly"
+            android:text="Tax"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/claimsettled" />
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/quoteId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="1dp"
@@ -100,31 +100,31 @@
             app:layout_constraintStart_toStartOf="@+id/policyType" />
 
         <TextView
-            android:id="@+id/textView14"
+            android:id="@+id/quotePremium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="45 years"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/age"
-            app:layout_constraintStart_toStartOf="@+id/textView13" />
+            app:layout_constraintStart_toStartOf="@+id/quoteId" />
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/quoteFees"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="80%"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/claimsettled"
-            app:layout_constraintStart_toStartOf="@+id/textView14" />
+            app:layout_constraintStart_toStartOf="@+id/quotePremium" />
 
         <TextView
-            android:id="@+id/textView16"
+            android:id="@+id/quoteTax"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2,000"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/monthlypay"
-            app:layout_constraintStart_toStartOf="@+id/textView15" />
+            app:layout_constraintStart_toStartOf="@+id/quoteFees" />
 
         <TextView
             android:id="@+id/textView17"
@@ -133,7 +133,7 @@
             android:layout_height="wrap_content"
             android:text="View Features >"
             android:textColor="@color/colorAccent"
-            app:layout_constraintBottom_toBottomOf="@+id/textView15"
+            app:layout_constraintBottom_toBottomOf="@+id/quoteFees"
             app:layout_constraintEnd_toEndOf="parent" />
 
         <Button
@@ -143,7 +143,7 @@
             android:background="@drawable/mybutton"
             android:text="BUY NOW"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView16" />
+            app:layout_constraintTop_toTopOf="@+id/quoteTax" />
 
         <TextView
             android:id="@+id/textView18"

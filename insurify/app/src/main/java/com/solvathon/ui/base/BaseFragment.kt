@@ -8,7 +8,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.solvathon.core.AppPreferences
+import com.solvathon.domain.pojo.Policy
 import com.solvathon.ui.home.HomeViewModel
+import java.math.BigDecimal
+import java.time.LocalDate
 import javax.inject.Inject
 
 abstract class BaseFragment : Fragment() {
@@ -48,4 +51,61 @@ abstract class BaseFragment : Fragment() {
     fun toggleLoader(isLoader: Boolean) {}
 
     abstract fun showLoader(b: Boolean)
+     fun fetchPolicyBasedOnLob(pos: Int):List<Policy>?{
+         when(pos){
+             0->{
+                 //fetch health insurance by login id
+                 var policies = listOf(
+                     Policy(
+                         1000, BigDecimal(1750), BigDecimal(150), BigDecimal(100),
+                         LocalDate.now(), LocalDate.now(), "Health Insurance", 2000
+                     ),
+                     Policy(
+                         1000, BigDecimal(1750), BigDecimal(150), BigDecimal(100),
+                         LocalDate.now(), LocalDate.now(), "Health Insurance", 2000
+                     ),)
+                 return policies
+             }
+             1->{
+                 //fetch health insurance by login id
+                 var policies = listOf(
+                     Policy(
+                         1000, BigDecimal(1750), BigDecimal(150), BigDecimal(100),
+                         LocalDate.now(), LocalDate.now(), "Car Insurance", 2000
+                     ),
+                     Policy(
+                         1000, BigDecimal(1750), BigDecimal(150), BigDecimal(100),
+                         LocalDate.now(), LocalDate.now(), "Car Insurance", 2000
+                     ),)
+                 return policies
+             }
+             2->{
+                 //fetch health insurance by login id
+                 var policies = listOf(
+                     Policy(
+                         1000, BigDecimal(1750), BigDecimal(150), BigDecimal(100),
+                         LocalDate.now(), LocalDate.now(), "Travel Insurance", 2000
+                     ),
+                     Policy(
+                         1000, BigDecimal(1750), BigDecimal(150), BigDecimal(100),
+                         LocalDate.now(), LocalDate.now(), "Travel Insurance", 2000
+                     ),)
+                 return policies
+             }
+             4->{
+                 //fetch health insurance by login id
+                 var policies = listOf(
+                     Policy(
+                         1000, BigDecimal(1750), BigDecimal(150), BigDecimal(100),
+                         LocalDate.now(), LocalDate.now(), "Travel Insurance", 2000
+                     ),
+                     Policy(
+                         1000, BigDecimal(1750), BigDecimal(150), BigDecimal(100),
+                         LocalDate.now(), LocalDate.now(), "Travel Insurance", 2000
+                     ),)
+                 return policies
+             }
+         }
+         return null
+     }
 }

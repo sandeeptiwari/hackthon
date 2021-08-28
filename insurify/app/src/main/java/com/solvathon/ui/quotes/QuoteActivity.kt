@@ -1,53 +1,56 @@
 package com.solvathon.ui.quotes
-
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.solvathon.R
+import com.solvathon.databinding.ActivityQuotesBinding
+import com.solvathon.domain.pojo.Policy
 import com.solvathon.ui.base.BaseActivity
-import com.solvathon.ui.claims.ClaimItem
-import com.solvathon.ui.claims.MyClaimsAdapter
+import dagger.hilt.android.AndroidEntryPoint
 import java.util.ArrayList
 
-class QuoteActivity : BaseActivity(){
+@AndroidEntryPoint
+class QuoteActivity() :BaseActivity(){
+    lateinit var linearLayoutManager: LinearLayoutManager
+    lateinit var binding: ActivityQuotesBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //actionbar
+        val actionbar = supportActionBar
+        //set actionbar title
+        actionbar!!.title = "Quotes"
+        //set back button
+        actionbar.setDisplayHomeAsUpEnabled(true)
+        actionbar.setDisplayHomeAsUpEnabled(true)
 
-        val quotes = getQuotes()
+        val quotes = intent.getParcelableArrayListExtra<Policy>("QUOTES_DATA")
+        setUpRecycleView(quotes)
+    }
 
-        val claimsRecyclerView: RecyclerView = findViewById<RecyclerView>(R.id.recycler_view_my_quotes)
-        claimsRecyclerView.adapter = MyQuotesAdapter(quotes)
-        claimsRecyclerView.layoutManager = LinearLayoutManager(this)
-
+    fun setUpRecycleView(quotes: ArrayList<Policy>?) {
+        linearLayoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
+        binding.recyclerViewMyQuote.apply {
+            layoutManager = linearLayoutManager
+            adapter = quotes?.let { MyQuotesAdapter(it) }
+        }
     }
 
     override fun findContentView(): Int {
-        return R.layout.my_quotes
+        return R.layout.activity_quotes
     }
 
     override fun bindViewWithViewBinding(view: View) {
-
+        binding = ActivityQuotesBinding.bind(view)
     }
 
     override fun toggleLoader(b: Boolean) {
-
+        TODO("Not yet implemented")
     }
 
-    private fun getQuotes(): List<QuoteItem>{
-        val quotes = ArrayList<QuoteItem>()
-
-        val q1 = QuoteItem("1,00,000", "45 years", "80%", "2,000")
-        val q2 = QuoteItem("1,00,000", "40 years", "50%", "2,000")
-        val q3 = QuoteItem("1,00,000", "55 years", "60%", "2,000")
-        val q4 = QuoteItem("1,00,000", "25 years", "40%", "2,000")
-
-        quotes.add(q1)
-        quotes.add(q2)
-        quotes.add(q3)
-        quotes.add(q4)
-
-        return quotes
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
 }
