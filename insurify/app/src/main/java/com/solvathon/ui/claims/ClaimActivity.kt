@@ -34,6 +34,11 @@ class ClaimActivity: BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        val actionbar = supportActionBar
+
+        actionbar?.setDisplayHomeAsUpEnabled(true)
+        actionbar?.setDisplayHomeAsUpEnabled(true)
+
         findViewById<TextView>(R.id.text_view_name).text = intent.getStringExtra("name")
         findViewById<TextView>(R.id.text_view_claim_id).text = intent.getStringExtra("claimId")
         findViewById<TextView>(R.id.text_view_date_of_admission).text = intent.getStringExtra("dateOfAdmission")
@@ -134,4 +139,8 @@ class ClaimActivity: BaseActivity() {
         patientView.visibility = View.GONE
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
 }

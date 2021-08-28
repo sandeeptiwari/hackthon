@@ -6,11 +6,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_my_claims"
+        android:id="@+id/recycler_view_hospitals"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="4dp"
         android:clipToPadding="false"
-        tools:listitem="@layout/my_claims_item"/>
+        tools:listitem="@layout/hospital_item"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

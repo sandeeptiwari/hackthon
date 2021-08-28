@@ -29,6 +29,10 @@
             android:name=".ui.login.LoginActivity"
             android:exported="true" />
         <activity
+            android:name=".ui.wellness.WellnessActivity"
+            android:exported="true"
+            android:label="Wellness"/>
+        <activity
             android:name=".ui.claims.MyClaimsActivity"
             android:exported="true"
             android:label="Claims" />

@@ -18,6 +18,7 @@ import com.solvathon.ui.home.adapter.HomeMenuAdapter
 import com.solvathon.ui.home.adapter.PolicyLobsAdapter
 import com.solvathon.ui.home.adapter.ProductOfferAdapter
 import com.solvathon.ui.policy.PolicyActivity
+import com.solvathon.ui.wellness.WellnessActivity
 import com.visbiliti.exception.NoDataException
 import dagger.hilt.android.AndroidEntryPoint
 import java.math.BigDecimal
@@ -179,7 +180,8 @@ class HomeFragment : BaseFragment(), PolicyLobsAdapter.OnItemClickListener,
     override fun onMenuClick(pos: Int) {
         when(pos) {
             0 -> {
-                //wellness
+                val intent = Intent(activity, WellnessActivity::class.java)
+                startActivity(intent)
             }
             1 -> {
                 val intent = Intent(activity, MyClaimsActivity::class.java)
