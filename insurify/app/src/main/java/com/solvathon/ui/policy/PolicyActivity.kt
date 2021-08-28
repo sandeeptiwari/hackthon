@@ -4,17 +4,18 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.solvathon.R
+import com.solvathon.domain.pojo.Policy
 import com.solvathon.ui.base.BaseActivity
 import java.util.ArrayList
 
-class PolicyActivity :BaseActivity(){
+class PolicyActivity(var policies: List<Policy>) :BaseActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         val policy = getPolicy()
 
         val claimsRecyclerView:RecyclerView = findViewById<RecyclerView>(R.id.recycler_view_my_policy)
-        claimsRecyclerView.adapter = MyPolicyAdapter(policy)
+        claimsRecyclerView.adapter = MyPolicyAdapter(policies)
         claimsRecyclerView.layoutManager = LinearLayoutManager(this)
 
     }

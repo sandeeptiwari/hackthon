@@ -1,5 +1,6 @@
 package com.solvathon.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -15,6 +16,7 @@ import com.solvathon.ui.base.BaseFragment
 import com.solvathon.ui.home.adapter.HomeMenuAdapter
 import com.solvathon.ui.home.adapter.PolicyLobsAdapter
 import com.solvathon.ui.home.adapter.ProductOfferAdapter
+import com.solvathon.ui.policy.PolicyActivity
 import com.visbiliti.exception.NoDataException
 import dagger.hilt.android.AndroidEntryPoint
 import java.math.BigDecimal
@@ -179,6 +181,8 @@ class HomeFragment : BaseFragment(), PolicyLobsAdapter.OnItemClickListener,
                 //wellness
             }
             5 -> {
+                val intent : Intent = Intent(activity, PolicyActivity(policies)::class.java)
+                startActivity(intent)
             }
         }
     }
