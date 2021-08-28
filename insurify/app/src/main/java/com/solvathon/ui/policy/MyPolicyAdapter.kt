@@ -17,6 +17,7 @@ class MyPolicyAdapter(private val myPolicyList: ArrayList<Policy>): RecyclerView
         val premium:TextView = itemView.findViewById(R.id.textView14)
         val fees:TextView = itemView.findViewById(R.id.textView15)
         val taxes:TextView = itemView.findViewById(R.id.textView16)
+        val insuranceType:TextView = itemView.findViewById(R.id.InsuranceType)
         val viewPolicyBtn: Button = itemView.findViewById(R.id.viewPolicy)
     }
 
@@ -31,6 +32,7 @@ class MyPolicyAdapter(private val myPolicyList: ArrayList<Policy>): RecyclerView
         holder.premium.text = currentItem.premium.toString()
         holder.fees.text = currentItem.fees.toString()
         holder.taxes.text = currentItem.taxes.toString()
+        holder.insuranceType.text=currentItem.insuranceType.toString()
 /*
 will page all the policy info to individual policy screen from here
         holder.viewPolicyBtn.setOnClickListener {

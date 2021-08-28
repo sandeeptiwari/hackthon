@@ -39,7 +39,7 @@
             app:srcCompat="@drawable/ic_launcher_background" />
 
         <TextView
-            android:id="@+id/policyType"
+            android:id="@+id/InsuranceType"
             style="@style/CardView"
             android:layout_width="181dp"
             android:layout_height="45dp"
@@ -56,7 +56,7 @@
             style="@style/CardView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Policy ID"
+            android:text="Policy Id"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
@@ -97,7 +97,7 @@
             android:text="1,00,000"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/lifecover"
-            app:layout_constraintStart_toStartOf="@+id/policyType" />
+            app:layout_constraintStart_toStartOf="@+id/InsuranceType" />
 
         <TextView
             android:id="@+id/textView14"
@@ -167,4 +167,3 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
-
