@@ -135,14 +135,16 @@ class HomeFragment : BaseFragment(), PolicyLobsAdapter.OnItemClickListener,
     override fun onItemClick(pos: Int) {
         when(pos) {
             0 -> {
-                var policyBasedOnLob=fetchPolicyBasedOnLob(pos)
-                var intent = Intent(activity, PolicyActivity()::class.java)
-                var bundle = Bundle()
-                if (policyBasedOnLob != null) {
-                    bundle.putParcelableArrayList("POLICY_DATA", ArrayList(policyBasedOnLob.filterNotNull()))
-                }
-                intent.putExtras(bundle)
-                startActivity(intent)
+              fetchPolicy(0)
+            }
+            1-> {
+               fetchPolicy(1)
+            }
+            2 -> {
+              fetchPolicy(2)
+            }
+            3-> {
+                fetchPolicy(3)
             }
         }
     }
@@ -178,6 +180,17 @@ class HomeFragment : BaseFragment(), PolicyLobsAdapter.OnItemClickListener,
             adapter = menuGridAdapter
         }
         menuGridAdapter?.notifyDataSetChanged()
+    }
+    private fun fetchPolicy(pos: Int){
+        var policyBasedOnLob=fetchPolicyBasedOnLob(pos)
+        var intent = Intent(activity, PolicyActivity()::class.java)
+        var bundle = Bundle()
+        if (policyBasedOnLob != null) {
+            bundle.putParcelableArrayList("POLICY_DATA", ArrayList(policyBasedOnLob.filterNotNull()))
+        }
+        intent.putExtras(bundle)
+        startActivity(intent)
+
     }
 
     override fun onOfferItemClick(pos: Int) {

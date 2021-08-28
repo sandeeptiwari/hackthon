@@ -65,7 +65,7 @@
             style="@style/CardView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Age"
+            android:text="Premium"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lifecover" />
 
@@ -103,7 +103,7 @@
             android:id="@+id/quotePremium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="45 years"
+            android:text="10000"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/age"
             app:layout_constraintStart_toStartOf="@+id/quoteId" />
