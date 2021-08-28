@@ -32,6 +32,10 @@
             android:name=".ui.policy.PolicyActivity"
             android:exported="true" />
         <activity
+            android:name=".ui.policy.IndividualPolicyActivity"
+            android:exported="true" />
+        <activity
+
             android:name=".ui.base.BaseActivity"
             android:exported="true" />
         <activity
