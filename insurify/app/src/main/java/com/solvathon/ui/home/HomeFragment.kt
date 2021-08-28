@@ -17,6 +17,7 @@ import com.solvathon.ui.claims.MyClaimsActivity
 import com.solvathon.ui.home.adapter.HomeMenuAdapter
 import com.solvathon.ui.home.adapter.PolicyLobsAdapter
 import com.solvathon.ui.home.adapter.ProductOfferAdapter
+import com.solvathon.ui.policy.PolicyActivity
 import com.visbiliti.exception.NoDataException
 import dagger.hilt.android.AndroidEntryPoint
 import java.math.BigDecimal
@@ -181,7 +182,14 @@ class HomeFragment : BaseFragment(), PolicyLobsAdapter.OnItemClickListener,
                 //wellness
             }
             1 -> {
-               val intent : Intent = Intent(activity, MyClaimsActivity::class.java)
+                val intent = Intent(activity, MyClaimsActivity::class.java)
+                startActivity(intent)
+            }
+            5 -> {
+                val intent = Intent(activity, PolicyActivity()::class.java)
+                val bundle = Bundle()
+                bundle.putParcelableArrayList("POLICY_DATA", ArrayList(policies))
+                intent.putExtras(bundle)
                 startActivity(intent)
             }
         }

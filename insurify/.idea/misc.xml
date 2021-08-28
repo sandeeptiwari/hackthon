@@ -12,6 +12,7 @@
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/activity_home.xml" value="0.12578125" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/activity_login.xml" value="0.10758196721311475" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/activity_main.xml" value="0.12578125" />
+        <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/activity_policy.xml" value="0.11180555555555556" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/activity_splash.xml" value="0.10758196721311475" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/content_main.xml" value="0.12578125" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/fragment_gallery.xml" value="0.12578125" />
@@ -29,6 +30,8 @@
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/more_fragment.xml" value="0.12578125" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/nav_header_main.xml" value="0.12578125" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/offer_item.xml" value="0.13333333333333333" />
+        <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/policy.xml" value="0.11180555555555556" />
+        <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/policy_item.xml" value="0.11180555555555556" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/row_dashboard_menu.xml" value="0.22" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/row_lobs.xml" value="0.1" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/row_offer.xml" value="0.10382513661202186" />
