@@ -17,6 +17,11 @@ class MyClaimsActivity :BaseActivity(){
 
         val claims = getClaims()
 
+        val actionbar = supportActionBar
+
+        actionbar?.setDisplayHomeAsUpEnabled(true)
+        actionbar?.setDisplayHomeAsUpEnabled(true)
+
         val claimsRecyclerView:RecyclerView = findViewById<RecyclerView>(R.id.recycler_view_my_claims)
         claimsRecyclerView.adapter = MyClaimsAdapter(claims)
         claimsRecyclerView.layoutManager = LinearLayoutManager(this)
@@ -50,5 +55,11 @@ class MyClaimsActivity :BaseActivity(){
 
         return claims
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
 
 }
