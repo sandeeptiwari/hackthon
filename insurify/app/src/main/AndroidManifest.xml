@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.solvathon">
+    package="com.solvathon" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
 
     <application
         android:name=".di.InsurifyApp"
@@ -9,22 +18,28 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Insurify">
+        android:theme="@style/Theme.Insurify" >
+        <activity
+            android:name=".ui.locker.activity.UploadActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.locker.activity.UploadDocumentActivity"
+            android:exported="true" />
         <activity
             android:name=".ui.login.LoginActivity"
             android:exported="true" />
         <activity
             android:name=".ui.claims.MyClaimsActivity"
             android:exported="true"
-            android:label="Claims"/>
+            android:label="Claims" />
         <activity
             android:name=".ui.claims.ClaimActivity"
             android:exported="true"
-            android:label="Claim"/>
+            android:label="Claim" />
         <activity
             android:name=".ui.quotes.QuoteActivity"
             android:exported="true"
-            android:label="Quotes"/>
+            android:label="Quotes" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
@@ -38,9 +53,10 @@
             android:name=".ui.splash.SplashActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Insurify.NoActionBar">
+            android:theme="@style/Theme.Insurify.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

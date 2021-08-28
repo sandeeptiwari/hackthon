@@ -1,5 +1,6 @@
 package com.solvathon
 
+import android.Manifest
 import android.os.Bundle
 import android.view.Menu
 import android.view.View
@@ -13,6 +14,8 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.solvathon.core.PermissionUtil
+import com.solvathon.core.PermissionUtil.netPermissions
 import com.solvathon.databinding.ActivityMainBinding
 import com.solvathon.databinding.ActivitySplashBinding
 import com.solvathon.ui.base.BaseActivity
@@ -20,7 +23,9 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : BaseActivity() {
-
+    val PERMISSIONS_REQUEST_CODE = 124
+    val CALENDER_PERMISSIONS_REQUEST_CODE = 125
+    val ALL_PERMISSIONS_REQUEST_CODE = 126
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,6 +43,8 @@ class MainActivity : BaseActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        checkIfAlPermissionGiven()
     }
 
     override fun findContentView(): Int {
@@ -50,5 +57,46 @@ class MainActivity : BaseActivity() {
 
     override fun toggleLoader(b: Boolean) {
         TODO("Not yet implemented")
+    }
+
+    private fun checkIfAlPermissionGiven() {
+        val perms = arrayOf<String>(
+            Manifest.permission.READ_CALENDAR,
+            Manifest.permission.WRITE_CALENDAR,
+            Manifest.permission.INTERNET,
+            Manifest.permission.CAMERA,
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.RECORD_AUDIO
+        )
+        if (PermissionUtil.ifPermissionGiven(this)) {
+//do nothing
+        } else if (shouldShowRequestPermissionRationale(Manifest.permission.WRITE_CALENDAR) || shouldShowRequestPermissionRationale(
+                Manifest.permission.WRITE_EXTERNAL_STORAGE)
+            || shouldShowRequestPermissionRationale(Manifest.permission.RECORD_AUDIO) ||  shouldShowRequestPermissionRationale(
+                Manifest.permission.CAMERA) ) {
+            requestPermissions(
+                netPermissions(perms,this),
+                ALL_PERMISSIONS_REQUEST_CODE
+            )
+        } else {
+            requestPermissions(
+                netPermissions(perms,this),
+                ALL_PERMISSIONS_REQUEST_CODE
+            )
+        }
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String>,
+        grantResults: IntArray
+    ) {
+        if (requestCode == CALENDER_PERMISSIONS_REQUEST_CODE) {
+
+        } else {
+            super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        }
+
     }
 }

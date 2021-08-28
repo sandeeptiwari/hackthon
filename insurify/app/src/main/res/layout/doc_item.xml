@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/itemSection"
+        layout="@layout/item_section"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/locator_carView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="8dp"
+        cardView:cardCornerRadius="8dp"
+        cardView:cardElevation="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/docIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                cardView:layout_constraintBottom_toBottomOf="parent"
+                cardView:layout_constraintStart_toStartOf="parent"
+                cardView:layout_constraintTop_toTopOf="parent"
+                cardView:srcCompat="@drawable/claim" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/docName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/locator_titles"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                cardView:layout_constraintBottom_toBottomOf="parent"
+                cardView:layout_constraintEnd_toStartOf="@+id/btnPreview"
+                cardView:layout_constraintHorizontal_bias="0.03"
+                cardView:layout_constraintStart_toEndOf="@+id/docIcon"
+                cardView:layout_constraintTop_toTopOf="parent"
+                cardView:layout_constraintVertical_bias="0.59" />
+
+            <ImageButton
+                android:id="@+id/btn_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@color/transparent"
+                cardView:layout_constraintEnd_toEndOf="parent"
+                cardView:layout_constraintTop_toTopOf="@+id/docName"
+                cardView:srcCompat="@drawable/download_button_selector" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnPreview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@color/transparent"
+                cardView:srcCompat="@drawable/preview_24"
+                cardView:layout_constraintEnd_toStartOf="@+id/btn_download"
+                cardView:layout_constraintTop_toTopOf="@+id/btn_download" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

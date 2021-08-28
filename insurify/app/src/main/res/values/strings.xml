@@ -20,4 +20,13 @@
     <string name="locator_titles">Hospitals</string>
     <string name="claim_support">Let us resolve your claim and renewal related query for your existing policy</string>
     <string name="country_code">* Please add respective country code before dialing the number</string>
+    <string name="about_locker">E-Locker will allow you to store your all require documents, Which facilitate you to use those document at any time.</string>
+    <string name="storage_permission_never_ask">To capture or select photos, allow Insurify access to your device\'s photos and media. \nTap Settings > Permissions, and turn Storage on.</string>
+    <string name="camera_permission_never_ask">To capture and store photos, allow Insurify access to your camera and storage. \nTap Settings > Permissions, and turn Camera and Storage on.</string>
+    <string name="video_permission_never_ask">To capture and store videoes, allow Insurify access to your camera, Microphone and storage. \nTap Settings > Permissions, and turn Camera,Microphone and Storage on.</string>
+    <string name="calender_permission_never_ask">To add event in calender, allow Insurify access to your Calender. \nTap Settings > Permissions, and turn Calender on.</string>
+    <string name="permission_never_ask">Allow Insurify access to your Calender. \nTap Settings > Give permissions.</string>
+    <string name="permission_manually">Permit Manually</string>
+    <string name="message_delete_all_notifications">Are you sure want to delete all notifications ?</string>
+    <string name="cancel">Cancel</string>
 </resources>

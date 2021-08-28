@@ -7,6 +7,7 @@
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/drawable-v24/help_button_gradient.xml" value="0.137890625" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/drawable/bottom_navigation_color_selector.xml" value="0.137890625" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/drawable/call.xml" value="0.137890625" />
+        <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/drawable/download_button_selector.xml" value="0.12256944444444444" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/drawable/offer_item.xml" value="0.137890625" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/drawable/rounded_corner.xml" value="0.137890625" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/activity_home.xml" value="0.12578125" />
@@ -14,13 +15,18 @@
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/activity_main.xml" value="0.12578125" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/activity_policy.xml" value="0.11180555555555556" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/activity_splash.xml" value="0.10758196721311475" />
+        <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/activity_upload.xml" value="0.11180555555555556" />
+        <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/activity_upload_document.xml" value="0.11180555555555556" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/content_main.xml" value="0.12578125" />
+        <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/doc_item.xml" value="0.1" />
+        <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/fragment_elocker.xml" value="0.13999999999999999" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/fragment_gallery.xml" value="0.12578125" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/fragment_home.xml" value="0.12578125" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/fragment_locator.xml" value="0.12578125" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/fragment_slideshow.xml" value="0.12578125" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/home_fragment.xml" value="0.1" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/item_locators.xml" value="0.14666666666666667" />
+        <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/item_more.xml" value="0.14666666666666667" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/item_section.xml" value="0.1" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/layout_home_wearable.xml" value="0.12578125" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/layout_offers.xml" value="0.12578125" />
@@ -38,43 +44,6 @@
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/support_fragment.xml" value="0.12" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.12578125" />
         <entry key="..\:/research_and_deve/android/solvathon/client/insurify/app/src/main/res/layout/content_main.xml" value="0.10144927536231885" />
-        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.25925925925925924" />
-        <entry key="app/src/main/res/drawable/ic_checkbox_checked.xml" value="0.31145833333333334" />
-        <entry key="app/src/main/res/drawable/ic_checkbox_unchecked.xml" value="0.31145833333333334" />
-        <entry key="app/src/main/res/drawable/ic_hsbc_logo.xml" value="0.31145833333333334" />
-        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.25925925925925924" />
-        <entry key="app/src/main/res/drawable/ic_menu_camera.xml" value="0.31145833333333334" />
-        <entry key="app/src/main/res/drawable/ic_menu_gallery.xml" value="0.25925925925925924" />
-        <entry key="app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.25925925925925924" />
-        <entry key="app/src/main/res/drawable/mybutton.xml" value="0.31145833333333334" />
-        <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.25925925925925924" />
-        <entry key="app/src/main/res/layout/activity_base.xml" value="0.2259963768115942" />
-        <entry key="app/src/main/res/layout/activity_home.xml" value="0.2259963768115942" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.2259963768115942" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3512741136973228" />
-        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.2259963768115942" />
-        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.1019000160723617" />
-        <entry key="app/src/main/res/layout/billing_info.xml" value="0.2953125" />
-        <entry key="app/src/main/res/layout/claim_info.xml" value="0.2259963768115942" />
-        <entry key="app/src/main/res/layout/claim_list_item.xml" value="0.36028537455410226" />
-        <entry key="app/src/main/res/layout/claim_screen.xml" value="0.2953125" />
-        <entry key="app/src/main/res/layout/content_main.xml" value="0.14361702127659576" />
-        <entry key="app/src/main/res/layout/document.xml" value="0.2953125" />
-        <entry key="app/src/main/res/layout/fragment_claims.xml" value="0.2953125" />
-        <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.14361702127659576" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3578842834127159" />
-        <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.14361702127659576" />
-        <entry key="app/src/main/res/layout/history_item.xml" value="0.2953125" />
-        <entry key="app/src/main/res/layout/my_claim_item.xml" value="0.2259963768115942" />
-        <entry key="app/src/main/res/layout/my_claims.xml" value="0.35870210404466735" />
-        <entry key="app/src/main/res/layout/my_claims_item.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/my_quotes.xml" value="0.2259963768115942" />
-        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.14361702127659576" />
-        <entry key="app/src/main/res/layout/patient_info.xml" value="0.2953125" />
-        <entry key="app/src/main/res/layout/policy_list_item.xml" value="0.28804193170051967" />
-        <entry key="app/src/main/res/layout/quote_list_item.xml" value="0.3406234071373036" />
-        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.2907692307692308" />
-        <entry key="app/src/main/res/menu/main.xml" value="0.2907692307692308" />
       </map>
     </option>
   </component>
