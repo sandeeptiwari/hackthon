@@ -133,17 +133,17 @@ class HomeFragment : BaseFragment(), PolicyLobsAdapter.OnItemClickListener,
     }
 
     override fun onItemClick(pos: Int) {
-        when(pos) {
+        when (pos) {
             0 -> {
-              fetchPolicy(0)
+                fetchPolicy(0)
             }
-            1-> {
-               fetchPolicy(1)
+            1 -> {
+                fetchPolicy(1)
             }
             2 -> {
-              fetchPolicy(2)
+                fetchPolicy(2)
             }
-            3-> {
+            3 -> {
                 fetchPolicy(3)
             }
         }
