@@ -1,26 +1,32 @@
 package com.solvathon.ui.policy
-
+import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.solvathon.R
 import com.solvathon.domain.pojo.Policy
+import android.content.Context
+
 
 class MyPolicyAdapter(private val myPolicyList: ArrayList<Policy>): RecyclerView.Adapter<MyPolicyAdapter.MyPolicyViewHolder> (){
-
+    lateinit var context : Context
     class MyPolicyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         //initial layout was diffreent so have kept the same id for testing will change once this works
-        val policyId:TextView = itemView.findViewById(R.id.lifecover)
-        val premium:TextView = itemView.findViewById(R.id.claimsettled)
-        val fees:TextView = itemView.findViewById(R.id.monthlypay)
-        val taxes:TextView = itemView.findViewById(R.id.age)
+        val policyId:TextView = itemView.findViewById(R.id.textView13)
+        val premium:TextView = itemView.findViewById(R.id.textView14)
+        val fees:TextView = itemView.findViewById(R.id.textView15)
+        val taxes:TextView = itemView.findViewById(R.id.textView16)
+        val insuranceType:TextView = itemView.findViewById(R.id.InsuranceType)
         val viewPolicyBtn: Button = itemView.findViewById(R.id.viewPolicy)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyPolicyViewHolder {
+        context=parent.context
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.policy_item,parent,false)
         return MyPolicyViewHolder(itemView)
     }
@@ -31,19 +37,19 @@ class MyPolicyAdapter(private val myPolicyList: ArrayList<Policy>): RecyclerView
         holder.premium.text = currentItem.premium.toString()
         holder.fees.text = currentItem.fees.toString()
         holder.taxes.text = currentItem.taxes.toString()
-/*
-will page all the policy info to individual policy screen from here
+        holder.insuranceType.text=currentItem.insuranceType.toString()
+
+
         holder.viewPolicyBtn.setOnClickListener {
             val policy:Policy = myPolicyList.get(position)
-            val intent: Intent = Intent(context, PolicyActivity::class.java).also {
-                it.putExtra("name",policy.name)
-                it.putExtra("claimId",policy.claimId)
-                it.putExtra("dateOfAdmission",policy.dateOfAdmission)
-                it.putExtra("claimAmount",policy.claimAmount)
-            }
+
+            val intent = Intent(context, IndividualPolicyActivity::class.java)
+            val bundle = Bundle()
+            bundle.putParcelable("INDIVIDUAL_POLICY_DATA", policy)
+            intent.putExtras(bundle)
             context.startActivity(intent)
         }
-        */
+
 
     }
 
