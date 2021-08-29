@@ -218,9 +218,9 @@ class HomeFragment : BaseFragment(), PolicyLobsAdapter.OnItemClickListener,
                 startActivity(intent)
             }
             5 -> {
-                val intent = Intent(activity, PolicyActivity()::class.java)
+                val intent = Intent(activity, QuoteActivity()::class.java)
                 val bundle = Bundle()
-                bundle.putParcelableArrayList("POLICY_DATA", ArrayList(policies))
+                bundle.putParcelableArrayList("QUOTES_DATA", ArrayList(policies))
                 intent.putExtras(bundle)
                 startActivity(intent)
             }

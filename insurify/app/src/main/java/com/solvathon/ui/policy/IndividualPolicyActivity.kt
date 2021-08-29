@@ -1,10 +1,14 @@
 package com.solvathon.ui.policy
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.solvathon.MainActivity
 import com.solvathon.R
 import com.solvathon.databinding.IndividualPolicyPageBinding
 import com.solvathon.domain.pojo.Policy
@@ -19,6 +23,7 @@ class IndividualPolicyActivity() :BaseActivity(){
         super.onCreate(savedInstanceState)
         //actionbar
         val actionbar = supportActionBar
+
         //set actionbar title
         actionbar!!.title = "Policy"
         //set back button
@@ -31,6 +36,21 @@ class IndividualPolicyActivity() :BaseActivity(){
         findViewById<TextView>(R.id.taxes).text=policy?.taxes.toString()
         findViewById<TextView>(R.id.fees).text=policy?.fees.toString()
         findViewById<TextView>(R.id.effectiveDate).text=policy?.effectiveDate.toString()
+        var btn:Button=findViewById<Button>(R.id.button4)
+        btn.setOnClickListener {
+
+            val intent = Intent(this, MainActivity::class.java)
+
+            val text = "Claimed!"
+            val duration = Toast.LENGTH_SHORT
+
+            val toast = Toast.makeText(this, text, duration)
+            toast.show()
+            this.startActivity(intent)
+
+
+        }
+
 
 
 

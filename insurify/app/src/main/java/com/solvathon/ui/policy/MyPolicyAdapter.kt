@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.solvathon.R
 import com.solvathon.domain.pojo.Policy
 import android.content.Context
+import android.widget.ImageView
 
 
 class MyPolicyAdapter(private val myPolicyList: ArrayList<Policy>): RecyclerView.Adapter<MyPolicyAdapter.MyPolicyViewHolder> (){
@@ -23,6 +24,7 @@ class MyPolicyAdapter(private val myPolicyList: ArrayList<Policy>): RecyclerView
         val taxes:TextView = itemView.findViewById(R.id.textView16)
         val insuranceType:TextView = itemView.findViewById(R.id.InsuranceType)
         val viewPolicyBtn: Button = itemView.findViewById(R.id.viewPolicy)
+        val image: ImageView = itemView.findViewById(R.id.imageView3)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyPolicyViewHolder {
@@ -38,6 +40,17 @@ class MyPolicyAdapter(private val myPolicyList: ArrayList<Policy>): RecyclerView
         holder.fees.text = currentItem.fees.toString()
         holder.taxes.text = currentItem.taxes.toString()
         holder.insuranceType.text=currentItem.insuranceType.toString()
+        if(holder.insuranceType.text=="Health Insurance") {
+            holder.image.setImageResource(R.drawable.ambulance)
+        }else if(holder.insuranceType.text=="Car Insurance"){
+            holder.image.setImageResource(R.drawable.car_24)
+        }else if(holder.insuranceType.text=="2 Wheeler Insurance"){
+            holder.image.setImageResource(R.drawable.bike_24)
+        }else if(holder.insuranceType.text=="Travel Insurance"){
+            holder.image.setImageResource(R.drawable.travel_24)
+        }else{
+            holder.image.setImageResource(R.drawable.book_appointment)
+        }
 
 
         holder.viewPolicyBtn.setOnClickListener {
