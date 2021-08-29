@@ -60,10 +60,6 @@ class UploadDocumentActivity : BaseActivity(), DocAdapter.OnItemClickListener {
         binding = ActivityUploadDocumentBinding.bind(view)
     }
 
-    override fun toggleLoader(b: Boolean) {
-        TODO("Not yet implemented")
-    }
-
     override fun onResume() {
         super.onResume()
     }

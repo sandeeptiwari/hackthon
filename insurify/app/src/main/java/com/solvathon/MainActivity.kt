@@ -30,7 +30,6 @@ class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         val navView: BottomNavigationView = binding.navView
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
@@ -53,10 +52,6 @@ class MainActivity : BaseActivity() {
 
     override fun bindViewWithViewBinding(view: View) {
         binding = ActivityMainBinding.bind(view)
-    }
-
-    override fun toggleLoader(b: Boolean) {
-        TODO("Not yet implemented")
     }
 
     private fun checkIfAlPermissionGiven() {

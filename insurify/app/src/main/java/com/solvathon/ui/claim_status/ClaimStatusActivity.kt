@@ -28,10 +28,6 @@ class ClaimStatusActivity :BaseActivity(){
 
     }
 
-    override fun toggleLoader(b: Boolean) {
-        TODO("Not yet implemented")
-    }
-
     private fun getClaimStatus(): List<ClaimStatusItem>{
         val claimStatus = ArrayList<ClaimStatusItem>()
 

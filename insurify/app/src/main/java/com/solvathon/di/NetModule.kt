@@ -2,8 +2,8 @@ package com.solvathon.di
 
 import android.util.Log
 import com.solvathon.core.Session
-import com.solvathon.domain.URLFactory
-import com.solvathon.domain.datasource.PolicyLiveDataSource
+import com.solvathon.core.URLFactory
+import com.solvathon.domain.service.AuthenticationService
 import com.solvathon.domain.service.PolicyService
 import com.visbiliti.exception.AuthenticationException
 import com.visbiliti.exception.ServerError
@@ -65,6 +65,12 @@ object NetModule {
 
     @Provides
     @Singleton
+    fun provideAuthenticationService(retrofit: Retrofit): AuthenticationService {
+        return retrofit.create(AuthenticationService::class.java)
+    }
+
+    @Provides
+    @Singleton
     @Named("header")
     internal fun provideHeaderInterceptor(session: Session): Interceptor {
 
@@ -72,31 +78,31 @@ object NetModule {
             Log.d("tag","session.userSession" +session.userSession)
             if (session.userSession.isNotEmpty()) {
                 val build = chain.request().newBuilder()
-                    .addHeader(Session.API_KEY, session.apiKey.replace("\u0000",""))
-                    .addHeader(Session.APP, Session.APP_VALUE.replace("\u0000",""))
-                    .addHeader(Session.USER_SESSION, /*"Bearer " +*/ session.userSession.replace("\u0000",""))
-                    /*  if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                          if (Resources.getSystem().configuration.locales[0].language == "ar") "ar"
-                          else "en"
-                      } else {
-                          if (Resources.getSystem().configuration.locale.language == "ar") "ar"
-                          else "en"
-                      }*/
+                    .addHeader(Session.API_KEY, session.user!!.id.toString())
+                    /*  .addHeader(Session.APP, Session.APP_VALUE.replace("\u0000",""))
+                     .addHeader(Session.USER_SESSION, /*"Bearer " +*/ session.userSession.replace("\u0000",""))
+                      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                           if (Resources.getSystem().configuration.locales[0].language == "ar") "ar"
+                           else "en"
+                       } else {
+                           if (Resources.getSystem().configuration.locale.language == "ar") "ar"
+                           else "en"
+                       }*/
                     .build()
                 chain.proceed(build)
             } else {
                 val build = chain.request().newBuilder()
-                    .addHeader(Session.API_KEY, session.apiKey.replace("\u0000",""))
-                    .addHeader(Session.APP, Session.APP_VALUE.replace("\u0000",""))
-                    .addHeader(Session.USER_SESSION, /*"Bearer " +*/ session.userSession.replace("\u0000",""))
+                    /* .addHeader(Session.API_KEY, session.apiKey.replace("\u0000",""))
+                     .addHeader(Session.APP, Session.APP_VALUE.replace("\u0000",""))
+                     .addHeader(Session.USER_SESSION, /*"Bearer " +*/ session.userSession.replace("\u0000",""))
 
-                    /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                        if (Resources.getSystem().configuration.locales[0].language == "ar") "ar"
-                        else "en"
-                    } else {
-                        if (Resources.getSystem().configuration.locale.language == "ar") "ar"
-                        else "en"
-                    }*/
+                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                         if (Resources.getSystem().configuration.locales[0].language == "ar") "ar"
+                         else "en"
+                     } else {
+                         if (Resources.getSystem().configuration.locale.language == "ar") "ar"
+                         else "en"
+                     }*/
                     .build()
                 chain.proceed(build)
             }

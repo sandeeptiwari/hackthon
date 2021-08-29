@@ -22,12 +22,15 @@ constructor(private val preferences: SharedPreferences) {
         return preferences.getBoolean(name, false)
     }
 
-    fun getString(userJson: String): String {
-        TODO("Not yet implemented")
+    fun getString(name: String): String {
+        return preferences.getString(name, "")?:""
     }
 
-    fun putString(userJson: String, userJson1: String) {
-        TODO("Not yet implemented")
+    @SuppressLint("CommitPrefEdits")
+    fun putString(name: String, value: String) {
+        val editor = preferences.edit()
+        editor!!.putString(name, value)
+        editor.apply()
     }
 
     fun clearAll() {

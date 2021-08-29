@@ -46,10 +46,6 @@ class IndividualPolicyActivity() :BaseActivity(){
         binding = IndividualPolicyPageBinding.bind(view)
     }
 
-    override fun toggleLoader(b: Boolean) {
-        TODO("Not yet implemented")
-    }
-
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true

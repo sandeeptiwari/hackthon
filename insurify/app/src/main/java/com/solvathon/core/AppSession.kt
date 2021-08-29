@@ -6,18 +6,18 @@ import com.google.gson.Gson
 import com.solvathon.domain.pojo.User
 import javax.inject.Inject
 import javax.inject.Named
+import javax.inject.Singleton
 
+@Singleton
 class AppSession @Inject
-constructor(private val appPreferences: AppPreferences,
-            private val context: Context,
-            @param:Named("api-key") override var apiKey: String) : Session {
-
+constructor(private var appPreferences: AppPreferences,
+            private val context: Context) : Session {
     private val gson: Gson = Gson()
 
     override var user: User? = null
         get() {
             if (field == null) {
-                val userJSON = appPreferences.getString(USER_JSON)
+                val userJSON = appPreferences.getString(Session.USER_JSON)
                 field = gson.fromJson(userJSON, User::class.java)
             }
             return field
@@ -26,7 +26,7 @@ constructor(private val appPreferences: AppPreferences,
             field = value
             val userJson = gson.toJson(value)
             if (userJson != null)
-                appPreferences.putString(USER_JSON, userJson)
+                appPreferences.putString(Session.USER_JSON, userJson)
         }
 
     var userLogin: Boolean
@@ -65,11 +65,4 @@ constructor(private val appPreferences: AppPreferences,
     override fun clearSession() {
         appPreferences.clearAll()
     }
-
-
-    companion object {
-        const val USER_JSON = "user_json"
-    }
-
-
 }

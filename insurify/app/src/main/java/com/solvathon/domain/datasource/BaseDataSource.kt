@@ -10,7 +10,6 @@ import io.reactivex.schedulers.Schedulers
 
 open class BaseDataSource {
 
-
     fun <T> execute(observable: Single<ResponseBody<T>>): Single<DataWrapper<T>> {
         return observable
             /*.subscribeOn(Schedulers.from(appExecutors.networkIO()))

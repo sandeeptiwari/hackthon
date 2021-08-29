@@ -1,4 +1,9 @@
 package com.solvathon.domain.pojo
 
-object User {
-}
+data class User(
+    val id: Long?,
+    val firstName: String?,
+    val lastName: String?,
+    val username: String?,
+    val password: String?
+)

@@ -78,11 +78,6 @@ class WellnessActivity() : BaseActivity() {
         binding = ActivityWellnessBinding.bind(view)
     }
 
-
-    override fun toggleLoader(b: Boolean) {
-        TODO("Not yet implemented")
-    }
-
     class OnOfferItemClickListenerImpl : ProductOfferAdapter.OnOfferItemClickListener{
         override fun onOfferItemClick(pos: Int) {
             TODO("Not yet implemented")

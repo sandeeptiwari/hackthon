@@ -3,4 +3,5 @@
     <string name="splash_screen_title">Insurify</string>
     <string name="menu_locator">Locator</string>
     <string name="country_code">* Please add respective country code before dialing the number</string>
+    <string name="sign_in">Sign In</string>
 </resources>

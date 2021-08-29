@@ -1,5 +1,6 @@
 package com.solvathon.di
 
+import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
 import com.solvathon.core.AppPreferences
@@ -31,10 +32,19 @@ object AppModule {
     fun provideSessionManager(preferences: SharedPreferences) =
         AppPreferences(preferences)
 
-    @Singleton
+    /*@Singleton
     @Provides
     fun provideAppSession(appPreferences: AppPreferences,
-                          @ApplicationContext context: Context) : Session {
-      return AppSession(appPreferences, context, "")
+                          @ApplicationContext context: Context) : AppSession {
+      return AppSession(appPreferences, context)
+    }*/
+    @Provides
+    @Singleton
+    internal fun provideApplicationContext(application: Application): Context {
+        return application
     }
+
+    @Provides
+    @Singleton
+    internal fun getSession(session: AppSession): Session = session
 }

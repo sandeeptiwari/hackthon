@@ -44,10 +44,6 @@ class QuoteActivity() :BaseActivity(){
         binding = ActivityQuotesBinding.bind(view)
     }
 
-    override fun toggleLoader(b: Boolean) {
-        TODO("Not yet implemented")
-    }
-
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true

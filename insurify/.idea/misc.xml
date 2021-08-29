@@ -5,19 +5,25 @@
       <map>
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/drawable-v24/half_circular_view.xml" value="0.137890625" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/drawable-v24/help_button_gradient.xml" value="0.137890625" />
+        <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/drawable-xxxhdpi-v4/blue_btn_rounded.xml" value="0.12256944444444444" />
+        <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/drawable-xxxhdpi-v4/edit_text_white_rounded_bg.xml" value="0.12256944444444444" />
+        <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/drawable-xxxhdpi-v4/ic_img_done.xml" value="0.12256944444444444" />
+        <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/drawable-xxxhdpi-v4/ic_right_arrow.xml" value="0.12256944444444444" />
+        <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/drawable-xxxhdpi-v4/snackbar_gradirent.xml" value="0.12256944444444444" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/drawable/bottom_navigation_color_selector.xml" value="0.137890625" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/drawable/call.xml" value="0.137890625" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/drawable/download_button_selector.xml" value="0.12256944444444444" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/drawable/offer_item.xml" value="0.137890625" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/drawable/rounded_corner.xml" value="0.137890625" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/activity_home.xml" value="0.12578125" />
-        <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/activity_login.xml" value="0.10758196721311475" />
+        <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/activity_main.xml" value="0.12578125" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/activity_policy.xml" value="0.11180555555555556" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/activity_splash.xml" value="0.10758196721311475" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/activity_upload.xml" value="0.11180555555555556" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/activity_upload_document.xml" value="0.11180555555555556" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/content_main.xml" value="0.12578125" />
+        <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/custom_progress_button.xml" value="0.11180555555555556" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/doc_item.xml" value="0.1" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/fragment_elocker.xml" value="0.13999999999999999" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/fragment_gallery.xml" value="0.12578125" />
@@ -38,6 +44,7 @@
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/offer_item.xml" value="0.13333333333333333" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/policy.xml" value="0.11180555555555556" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/policy_item.xml" value="0.11180555555555556" />
+        <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/progress_bar_layout.xml" value="0.1" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/row_dashboard_menu.xml" value="0.22" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/row_lobs.xml" value="0.1" />
         <entry key="..\:/research_and_deve/android/solvathon/client/hackthon/insurify/app/src/main/res/layout/row_offer.xml" value="0.10382513661202186" />

@@ -27,10 +27,6 @@ class QuoteActivity :BaseActivity(){
 
     }
 
-    override fun toggleLoader(b: Boolean) {
-        TODO("Not yet implemented")
-    }
-
     private fun getQuote(): List<QuoteItem>{
         val quote = ArrayList<QuoteItem>()
 

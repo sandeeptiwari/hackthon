@@ -31,7 +31,7 @@ class SplashActivity : BaseActivity() {
                 .start()
         } else {
             Log.i("LOGIN", "User is not logined open login screen")
-            loadActivity(MainActivity::class.java)
+            loadActivity(LoginActivity::class.java)
                 .byFinishingAll()
                 .start()
         }
@@ -63,10 +63,6 @@ class SplashActivity : BaseActivity() {
 
     override fun bindViewWithViewBinding(view: View) {
         binding = ActivitySplashBinding.bind(view)
-    }
-
-    override fun toggleLoader(b: Boolean) {
-        TODO("Not yet implemented")
     }
 
     override fun findContentView(): Int {

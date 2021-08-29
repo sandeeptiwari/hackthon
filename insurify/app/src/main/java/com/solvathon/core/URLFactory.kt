@@ -1,4 +1,4 @@
-package com.solvathon.domain
+package com.solvathon.core
 
 import okhttp3.HttpUrl
 
@@ -8,7 +8,7 @@ object URLFactory {
     private val SCHEME = if (IS_LIVE) "http" else "http"
     private val HOST = if (IS_LIVE) "xyz" else "localhost"
     private val PORT = if (IS_LIVE) 8506 else 8080
-    private val API_PATH = if (IS_LIVE) "v1/" else "v1/"
+    private val API_PATH = if (IS_LIVE) "v1/api/" else "v1/api/"
 
     fun provideHttpUrl(): HttpUrl {
         return HttpUrl.Builder()
@@ -21,5 +21,6 @@ object URLFactory {
 
     object Method {
         const val GET_POLICY_LIST = "policy/"
+        const val LOGIN = "login/"
     }
 }

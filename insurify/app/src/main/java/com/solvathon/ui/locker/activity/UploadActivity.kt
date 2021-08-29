@@ -108,10 +108,6 @@ class UploadActivity : BaseActivity() {
         binding = ActivityUploadBinding.bind(view)
     }
 
-    override fun toggleLoader(b: Boolean) {
-        TODO("Not yet implemented")
-    }
-
     private fun netPermissions(wantedPermissions: Array<String>): Array<String> {
         val result = ArrayList<String>()
         for (permission in wantedPermissions) {
