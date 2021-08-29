@@ -87,7 +87,17 @@ class WellnessActivity() : BaseActivity() {
 
     class OnMenuClickListenerImpl: HomeMenuAdapter.OnMenulickListener{
         override fun onMenuClick(pos: Int) {
-            TODO("Not yet implemented")
+            when(pos){
+                0-> Log.i("Health Card", "clicked")
+                1-> Log.i("Book Appointment", "clicked")
+                2-> Log.i("OPD Cashless", "clicked")
+                3-> Log.i("OPD Reimbursment", "clicked")
+                4-> Log.i("Online Counselling", "clicked")
+                5-> Log.i("Health Help", "clicked")
+                6-> Log.i("Diet Plan", "clicked")
+                7-> Log.i("Physical Activity", "clicked")
+                8-> Log.i("Health Calculators", "clicked")
+            }
         }
 
     }

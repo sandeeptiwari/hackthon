@@ -39,10 +39,10 @@ class MyClaimsActivity :BaseActivity(){
     private fun getClaims(): List<ClaimItem>{
         val claims = ArrayList<ClaimItem>()
 
-        val claim1 = ClaimItem("Rishabh Gupta", "dbiuh9283", " 21 Jan", "39480")
-        val claim2 = ClaimItem("Rishabh Gupta", "pjef99203", " 21 Dec", "39480")
-        val claim3 = ClaimItem("Rishabh Gupta", "nwekh2312", " 21 March", "39480")
-        val claim4 = ClaimItem("Rishabh Gupta", "wdfwei334", " 21 Feb", "39480")
+        val claim1 = ClaimItem("Rishabh Gupta", "9238929", " 21 Jan", "39480")
+        val claim2 = ClaimItem("Rishabh Gupta", "2378388", " 21 Dec", "39480")
+        val claim3 = ClaimItem("Rishabh Gupta", "7483789", " 21 March", "39480")
+        val claim4 = ClaimItem("Rishabh Gupta", "2498292", " 21 Feb", "39480")
 
         claims.add(claim1)
         claims.add(claim2)

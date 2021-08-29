@@ -56,6 +56,7 @@ class ClaimActivity: BaseActivity() {
 
         val documents = getDocuments()
         val historyList = getHistory()
+        val bills = getBills()
 
         val documentRecyclerView:RecyclerView = findViewById(R.id.recycler_view_document)
         documentRecyclerView.adapter = DocumentAdapter(documents)
@@ -64,6 +65,10 @@ class ClaimActivity: BaseActivity() {
         val historyRecyclerView:RecyclerView = findViewById(R.id.recycler_view_history)
         historyRecyclerView.adapter = HistoryAdapter(historyList)
         historyRecyclerView.layoutManager = LinearLayoutManager(this)
+
+        val billingRecyclerView : RecyclerView = findViewById(R.id.recycler_view_billing)
+        billingRecyclerView.adapter = BillingAdapter(bills)
+        billingRecyclerView.layoutManager = LinearLayoutManager(this)
     }
 
     fun getDocuments():List<String>{
@@ -75,6 +80,13 @@ class ClaimActivity: BaseActivity() {
             HistoryItem("21 Jan 2020", R.drawable.ic_checkbox_checked,"issued"),
         HistoryItem("3 March 2020", R.drawable.ic_checkbox_checked, "verrified"),
         HistoryItem("21 April", R.drawable.ic_checkbox_unchecked, "processed")
+        )
+    }
+
+    fun getBills() : List<BillingItem>{
+        return listOf(
+            BillingItem("Pathology (Biopsy)","0", "8347", "8347"),
+            BillingItem("Room Rent","0", "4800", "4800"),
         )
     }
 
