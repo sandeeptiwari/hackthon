@@ -12,7 +12,7 @@
             android:id="@+id/imageView7"
             android:layout_width="match_parent"
             android:layout_height="238dp"
-            app:srcCompat="@drawable/ic_checkbox_checked" />
+            app:srcCompat="@drawable/claim_thumb" />
     </LinearLayout>
 
     <LinearLayout
@@ -193,14 +193,15 @@
         android:layout_height="64dp"
         android:layout_gravity="center">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button4"
             android:layout_width="170dp"
             android:layout_height="70dp"
             android:text="CLAIM"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="34sp"
+            android:background="@color/colorPrimary"
             app:iconTint="@color/colorAccent" />
     </LinearLayout>
 </LinearLayout>

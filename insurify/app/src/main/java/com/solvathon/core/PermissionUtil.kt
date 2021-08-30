@@ -58,7 +58,8 @@ object PermissionUtil {
                 && hasPermission(Manifest.permission.CAMERA,context)
                 && hasPermission(Manifest.permission.RECORD_AUDIO,context)
                 && hasPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE,context)
-                && hasPermission(Manifest.permission.READ_EXTERNAL_STORAGE,context))
+                && hasPermission(Manifest.permission.READ_EXTERNAL_STORAGE,context)
+                && hasPermission(Manifest.permission.ACCESS_FINE_LOCATION,context))
     }
 
 

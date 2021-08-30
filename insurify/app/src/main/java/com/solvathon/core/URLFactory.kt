@@ -6,7 +6,7 @@ object URLFactory {
 
     private const val IS_LIVE = false
     private val SCHEME = if (IS_LIVE) "http" else "http"
-    private val HOST = if (IS_LIVE) "xyz" else "localhost"
+    private val HOST = if (IS_LIVE) "xyz" else "192.168.0.104"
     private val PORT = if (IS_LIVE) 8506 else 8080
     private val API_PATH = if (IS_LIVE) "v1/api/" else "v1/api/"
 

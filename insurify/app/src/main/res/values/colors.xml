@@ -23,4 +23,5 @@
     <color name="yellow">#fac850</color>
     <color name="transparent">#00004a6b</color>
     <color name="text_color_414141">#414141</color>
+    <color name="colorPrimaryTranslucent">#556200EE</color>
 </resources>

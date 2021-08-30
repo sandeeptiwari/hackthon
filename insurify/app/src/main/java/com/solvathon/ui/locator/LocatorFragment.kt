@@ -1,5 +1,7 @@
 package com.solvathon.ui.locator
 
+import android.R.attr
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -26,12 +28,26 @@ import com.solvathon.ui.locator.adapter.OurNetworkAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import java.math.BigDecimal
 import java.time.LocalDate
+import android.R.attr.y
+
+import android.R.attr.x
+import android.content.Context
+import android.location.LocationManager
+import android.net.Uri
+import androidx.core.content.ContextCompat.getSystemService
+import com.google.android.gms.location.*
+import com.solvathon.di.InsurifyApp.Companion.mContext
+
 
 @AndroidEntryPoint
 class LocatorFragment : BaseFragment(), OurNetworkAdapter.OnItemClickListener {
-
+    private lateinit var fusedLocationClient: FusedLocationProviderClient
+    private lateinit var locationRequest: LocationRequest
+    private lateinit var locationCallback: LocationCallback
     private lateinit var locatorViewModel: LocatorViewModel
     private var _binding: FragmentLocatorBinding? = null
+    private var lat: Double? = 0.0
+    private var lon: Double? = 0.0;
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -97,9 +113,32 @@ class LocatorFragment : BaseFragment(), OurNetworkAdapter.OnItemClickListener {
 
     override fun bindData() {
         setUpNetworkLocatorRecyclerView();
+        checkLocation()
     }
 
-    override fun createLayout(): Int {
+    private fun checkLocation(){
+        val manager = mContext?.getSystemService(Context.LOCATION_SERVICE) as LocationManager
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(mContext)
+        getLocationUpdates()
+    }
+    private fun getLocationUpdates() {
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(activity)
+        locationRequest = LocationRequest()
+        locationRequest.interval = 50000
+        locationRequest.fastestInterval = 50000
+        locationRequest.smallestDisplacement = 170f //170 m = 0.1 mile
+        locationRequest.priority = LocationRequest.PRIORITY_HIGH_ACCURACY
+        locationCallback = object : LocationCallback() {
+            override fun onLocationResult(locationResult: LocationResult?) {
+                lat = locationResult?.lastLocation?.latitude
+                lon = locationResult?.lastLocation?.longitude
+            }
+        }
+    }
+
+
+
+        override fun createLayout(): Int {
         return  R.layout.fragment_locator
     }
 
@@ -118,6 +157,28 @@ class LocatorFragment : BaseFragment(), OurNetworkAdapter.OnItemClickListener {
     }
 
     override fun onItemClick(pos: Int) {
-        TODO("Not yet implemented")
+        when(pos) {
+            1 -> {
+                val uri = "geo:" + lat + "," + lon + "&q=Hospitals"
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(uri)))
+            }
+            2-> {
+                val uri = "geo:" + lat + "," + lon + "&q=garage"
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(uri)))
+            }
+            5-> {
+                val uri = "geo:" + lat + "," + lon + "&q=ambulance"
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(uri)))
+            }
+            7-> {
+                val uri = "geo:" + lat + "," + lon + "&q=ATMs"
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(uri)))
+            }
+            else -> {
+                val intent = Intent(activity, NearByActivity::class.java)
+                startActivity(intent)
+            }
+        }
+
     }
 }
